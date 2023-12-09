@@ -1,0 +1,23 @@
+{
+    "titulo": "Tostadas de tinga de setas",
+    "pasos":
+    [
+        {
+            "instruction":"Calienta el aceite y sofríe el ajo con la cebolla durante 3 minutos.  Favor de decir listo cuando se termine",
+            "img":"imgs/r3_p1.jpg"
+        },
+        {
+            "instruction":"Agrega las setas y cocina a fuego medio durante 20 minutos o hasta que estén suaves y ligeramente brillosas.  Favor de decir listo cuando se termine",
+            "img":"imgs/r3_p2.jpg"
+        },
+        {
+            "instruction":"Incorpora el Caldillo Líquido De Tomate Rojo Knorr®, el laurel, el cubo de Caldo De Vegetales Knorr® y el adobo de chipotle. Cocina durante 5 minutos más hasta que tenga consistencia de tinga.  Favor de decir listo cuando se termine",
+            "img":"imgs/r3_p3.jpg"
+        },
+        {
+            "instruction":"Toma la tostada, untale frijoles y distribuye tinga en las tostadas.  Favor de decir listo cuando se termine",
+            "img":"imgs/r3_p4.jpg"
+        }
+    ],
+    "ingredientes":"1 cucharada de aceite \n 1 diente de ajo picado \n 1 cebolla fileteada \n 400 gramos de setas fileteadas \n 500 ml de Caldillo Líquido De Tomate Rojo Knorr® \n 1 hoja de laurel \n 1 cubo (10.5 gramos) de Caldo De Vegetales Knorr® En Cubos \n 1 cucharada de adobo de chile chipotle \n 8 tostadas de maíz \n ½ taza de frijoles negros refritos"
+}

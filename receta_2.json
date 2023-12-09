@@ -1,0 +1,35 @@
+{
+    "titulo": "Espagueti rojo",
+    "pasos":
+    [
+        {
+            "instruction":"Cocinar la pasta en agua hirviendo durante 7 minutos, despues escurrir y conservar un poco del agua de cocción.  Favor de decir listo cuando se termine",
+            "img":"imgs/r2_p1.jpg"
+        },
+        {
+            "instruction":"Licuar los jitomates junto con la cebolla, el ajo, el agua y la leche, después colar la mezcla.  Favor de decir listo cuando se termine",
+            "img":"imgs/r2_p2.jpg"
+        },
+        {
+            "instruction":"Calienta el aceite a fuego medio y sofreír a mezcla anterior hasta que suelte hervor.  Favor de decir listo cuando se termine",
+            "img":"imgs/r2_p3.jpg"
+        },
+        {
+            "instruction":"Añade el orégano, el tomillo y el cubo de Knorr® Tomatísimo®. Baja el fuego y deja que se cocine durante 10-15 minutos o hasta que tome una textura espesa y un color más intenso.  Favor de decir listo cuando se termine",
+            "img":"imgs/r2_p4.jpg"
+        },
+        {
+            "instruction":"Incorpora la crema y mezcla bien. Rectifica la sazón.  Favor de decir listo cuando se termine",
+            "img":"imgs/r2_p5.jpg"
+        },
+        {
+            "instruction":"Añade el espagueti, el brócoli y la calabaza y un poquito del agua de cocción de la pasta. Cocina durante un par de minutos.  Favor de decir listo cuando se termine",
+            "img":"imgs/r2_p6.jpg"
+        },
+        {
+            "instruction":"Sirve y espolvorea un poco de queso rallado encima.  Favor de decir listo cuando se termine",
+            "img":"imgs/r2_p7.jpg"
+        }
+    ],
+    "ingredientes":"200 gramos de espagueti \n 400 gramos de jitomates cortados en cuartos \n ½ cebolla blanca \n 1 diente de ajo \n ½ taza de agua \n ¼ de taza de leche descremada \n 1 cucharadita de orégano seco \n 1 cucharadita de tomillo seco \n 1 cubo (10,5 gramos) de Knorr® Tomatísimo® En Cubos \n 1 cucharadita de aceite \n 250 gramos de crema agria \n 1 taza de brócoli cocido \n 1 taza de calabaza en cubos pequeños \n 40 gramos de queso fresco"
+}
