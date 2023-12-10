@@ -3,23 +3,23 @@
     "pasos":
     [
         {
-            "instruction":"Licuar el jitomate, la cebolla, el ajo y una taza de agua.  Favor de decir listo cuando se termine",
+            "instruction":"Licuar el jitomate, la cebolla, el ajo y una taza de agua.  Favor de decir listo cuando termine",
             "img":"imgs/r1_p1.jpg"
         },
         {
-            "instruction":"Colar el licuado del paso 1.  Favor de decir listo cuando se termine ",
+            "instruction":"Colar el licuado del paso 1.  Favor de decir listo cuando termine ",
             "img":"imgs/r1_p2.jpg"
         },
         {
-            "instruction":"En una olla, calentar el aceite y freír el fideo hasta que tome color dorado claro.  Favor de decir listo cuando se termine ",
+            "instruction":"En una olla, calentar el aceite y freír el fideo hasta que tome color dorado claro.  Favor de decir listo cuando termine ",
             "img":"imgs/r1_p3.jpg"
         },
         {
-            "instruction":"Verter el licuado del tomate hecho en el paso 1 a la olla y dejar hervir a fuego medio bajo por 3 minutos o hasta que el jitomate este sazonado.  Favor de decir listo cuando se termine ",
+            "instruction":"Verter el licuado del tomate hecho en el paso 1 a la olla y dejar hervir a fuego medio bajo por 3 minutos o hasta que el jitomate este sazonado.  Favor de decir listo cuando termine ",
             "img":"imgs/r1_p4.jpg"
         },
         {
-            "instruction":"Añadir el agua restante los cubos de Knorr tomate y hervir por 10 minutos más o hasta que la pasta este bien cocida.  Favor de decir listo cuando se termine ",
+            "instruction":"Añadir el agua restante los cubos de Knorr tomate y hervir por 10 minutos más o hasta que la pasta este bien cocida.  Favor de decir listo cuando termine ",
             "img":"imgs/r1_p5.jpg"
         }
     ],

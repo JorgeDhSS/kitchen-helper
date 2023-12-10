@@ -1,4 +1,4 @@
-import threading, mutagen, time, queue, json
+import threading, mutagen, time, queue, json, os
 from tkinter import *
 from tkinter import ttk
 import pygame as pygame 
@@ -7,7 +7,11 @@ from tkmacosx import Button
 import speech_recognition as sr
 from gtts import gTTS
 from PIL import ImageTk, Image
-
+from tkinter import messagebox
+local = threading.local()
+def setIngredientes(ingredientes):
+    #messagebox.showinfo("hh")
+    instructions.config(text=ingredientes)
 #TODO implementar click a botón de ingredientes
 def speak(textToSpeak):
     Speak.config(bg="#2D7A00")
@@ -38,9 +42,11 @@ def microphone(rec, source, q: queue.Queue):
 def instructionsF(fileJson, nameUser, rec, source, q):
     data = json.load(fileJson)
     title.config(text=data['titulo'])
+    local.ingredientes = data['ingredientes']
+    btnIngredientes.configure(state="normal", command=lambda:setIngredientes(data['ingredientes']))
     for i in data['pasos']:
         ilustrationImg = ImageTk.PhotoImage(Image.open(i["img"]))
-        ilustration.config(image=ilustrationImg, width=80)
+        ilustration.config(image=ilustrationImg, width=500)
         stepT = threading.Thread(name="stepT", target=speak(i["instruction"]))
         stepT.start()
         stepT.join()
@@ -67,10 +73,14 @@ def instructionsF(fileJson, nameUser, rec, source, q):
         if not finishListener.is_alive():
             Micro.config(bg="#8B8B8C")
             aud_text = q.get_nowait()
-            #TODO añadir caso de salir
-            if aud_text == "Otra":
+            if aud_text == "otra":
                 mainMenuT = threading.Thread(name="mainMenuT", target=mainMenu(nameUser, rec, source, q))
                 mainMenuT.start()
+            elif aud_text == "salir":
+                os._exit(os.EX_OK)
+            else:
+                mainThread = threading.Thread(name="mainThread", target=mainMenu(nameUser, rec, source, q))
+                mainThread.start()
 
 def otherOptions(rec, source, q, nameUser):
     otherOptionsMessages = threading.Thread(name="otherOptionsMessage", target=speak("1. Tostadas de tinga de setas  \n 2. Regresar"))
@@ -110,7 +120,7 @@ def otherOptions(rec, source, q, nameUser):
                             tOtherOptions = threading.Thread(name="otherOptions", target=otherOptions(rec, source, q, nameUser))
                             tOtherOptions.start()
 def mainMenu(nameUser, rec, source, q):
-    newThread = threading.Thread(name="firstMessage", target=speak("Hola {}, di el número de la receta que quieres cocinar: \n 1.Sopa de fideo \n 2. Espagueti rojo  \n 3. Otras".format(nameUser)))
+    newThread = threading.Thread(name="firstMessage", target=speak("Hola {}, di el número de la receta que quieres cocinar: \n 1.Sopa de fideo \n 2. Espagueti rojo  \n 3. Otras \n 4. Salir".format(nameUser)))
     newThread.start()
     newThread.join()
     if not newThread.is_alive():
@@ -123,7 +133,7 @@ def mainMenu(nameUser, rec, source, q):
             aud_text = q.get_nowait()
             print(aud_text)
             if aud_text == "EXCEPTION":
-                messageException = threading.Thread(name="exceptionMessage", target=speak("Lo sentimos {}, ocurrió un error, vuelve a intnetarlo".format(nameUser)))
+                messageException = threading.Thread(name="exceptionMessage", target=speak("Lo sentimos {}, ocurrió un error, vuelve a intentarlo".format(nameUser)))
                 messageException.start()
                 messageException.join()
                 if not newThread.is_alive():
@@ -143,6 +153,8 @@ def mainMenu(nameUser, rec, source, q):
                         fileJson = open('receta_2.json')
                         instructionsT = threading.Thread(name="instructionsF", target=instructionsF(fileJson, nameUser, rec, source, q))
                         instructionsT.start()
+                    case "cuatro" | 4 | "4":
+                        os._exit(os.EX_OK)
                     case default:
                         notFoundOption = threading.Thread(name="notFoundOption", target=speak("Lo sentimos {}, la opción elegida no se encuentra en el menú, por favor, intente de nuevo".format(nameUser)))
                         notFoundOption.start()
@@ -176,13 +188,13 @@ def voiceInterface():
                 voiceInterfaceT.start()
                 voiceInterfaceT.join()
                 if not voiceInterfaceT.is_alive():
-                    return 0
+                    os._exit(os.EX_OK)
             else:
                 mainThread = threading.Thread(name="mainThread", target=mainMenu(nameUser, rec, source, q))
                 mainThread.start()
                 mainThread.join()
                 if not mainThread.is_alive():
-                    return 0
+                    os._exit(os.EX_OK)
             
 #elemento raíz de la GUI
 root = Tk()
@@ -192,8 +204,9 @@ frm.grid()
 #Label título
 title = Label(frm, text="Bienvenido usuario", font=('Arial bold', 25))
 title.grid(padx=10, pady=10, column=0, row=0, sticky = W)
+local.ingredientes = "" 
 #Button (ingredientes)
-btnIngredientes = Button(frm, borderless=1, bg='#2D7A00', fg="#ffffff", highlightbackground='#2D7A00', text="🍎Ingredientes", command=print("Botón presionado"))
+btnIngredientes = Button(frm, borderless=1, bg='#2D7A00', fg="#ffffff", highlightbackground='#2D7A00', text="🍎Ingredientes", state="disabled", command=lambda:setIngredientes(local.ingredientes))
 btnIngredientes.grid(column=2, row=0)
 ttk.Label(frm, text="Instrucciones", font=('Arial bold', 18), anchor="w", justify= LEFT).grid(padx=10, pady=5, sticky = W, column=0, row=1)
 #Instructions field (Label)
@@ -209,7 +222,7 @@ Speak = Label(frm, image=imageSpeaker, bg="#8B8B8C", width=80)
 Speak.grid(padx=10, pady=5, row=3, column=2, rowspan=1)
 ttk.Label(frm, text="Ilustración", font=('Arial bold', 18), anchor="w", justify= LEFT).grid(padx=10, pady=5, sticky = W, column=0, row=4)
 ilustrationImg = ImageTk.PhotoImage(Image.open("micro.png"))
-ilustration = Label(frm, image=imageMicro, width=80)
+ilustration = Label(frm, image=ilustrationImg, width=500)
 ilustration.grid(padx=5, pady=5, row=5, column=0)
 t2 = threading.Thread(name="voiceInterface", target=voiceInterface)
 t2.start()

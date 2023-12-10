@@ -3,31 +3,31 @@
     "pasos":
     [
         {
-            "instruction":"Cocinar la pasta en agua hirviendo durante 7 minutos, despues escurrir y conservar un poco del agua de cocción.  Favor de decir listo cuando se termine",
+            "instruction":"Cocinar la pasta en agua hirviendo durante 7 minutos, despues escurrir y conservar un poco del agua de cocción.  Favor de decir listo cuando termine",
             "img":"imgs/r2_p1.jpg"
         },
         {
-            "instruction":"Licuar los jitomates junto con la cebolla, el ajo, el agua y la leche, después colar la mezcla.  Favor de decir listo cuando se termine",
+            "instruction":"Licuar los jitomates junto con la cebolla, el ajo, el agua y la leche, después colar la mezcla.  Favor de decir listo cuando termine",
             "img":"imgs/r2_p2.jpg"
         },
         {
-            "instruction":"Calienta el aceite a fuego medio y sofreír a mezcla anterior hasta que suelte hervor.  Favor de decir listo cuando se termine",
+            "instruction":"Calienta el aceite a fuego medio y sofreír a mezcla anterior hasta que suelte hervor.  Favor de decir listo cuando termine",
             "img":"imgs/r2_p3.jpg"
         },
         {
-            "instruction":"Añade el orégano, el tomillo y el cubo de Knorr® Tomatísimo®. Baja el fuego y deja que se cocine durante 10-15 minutos o hasta que tome una textura espesa y un color más intenso.  Favor de decir listo cuando se termine",
+            "instruction":"Añade el orégano, el tomillo y el cubo de Knorr® Tomatísimo®. Baja el fuego y deja que se cocine durante 10-15 minutos o hasta que tome una textura espesa y un color más intenso.  Favor de decir listo cuando termine",
             "img":"imgs/r2_p4.jpg"
         },
         {
-            "instruction":"Incorpora la crema y mezcla bien. Rectifica la sazón.  Favor de decir listo cuando se termine",
+            "instruction":"Incorpora la crema y mezcla bien. Rectifica la sazón.  Favor de decir listo cuando termine",
             "img":"imgs/r2_p5.jpg"
         },
         {
-            "instruction":"Añade el espagueti, el brócoli y la calabaza y un poquito del agua de cocción de la pasta. Cocina durante un par de minutos.  Favor de decir listo cuando se termine",
+            "instruction":"Añade el espagueti, el brócoli y la calabaza y un poquito del agua de cocción de la pasta. Cocina durante un par de minutos.  Favor de decir listo cuando termine",
             "img":"imgs/r2_p6.jpg"
         },
         {
-            "instruction":"Sirve y espolvorea un poco de queso rallado encima.  Favor de decir listo cuando se termine",
+            "instruction":"Sirve y espolvorea un poco de queso rallado encima.  Favor de decir listo cuando termine",
             "img":"imgs/r2_p7.jpg"
         }
     ],

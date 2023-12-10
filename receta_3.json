@@ -3,19 +3,19 @@
     "pasos":
     [
         {
-            "instruction":"Calienta el aceite y sofríe el ajo con la cebolla durante 3 minutos.  Favor de decir listo cuando se termine",
+            "instruction":"Calienta el aceite y sofríe el ajo con la cebolla durante 3 minutos.  Favor de decir listo cuando termine",
             "img":"imgs/r3_p1.jpg"
         },
         {
-            "instruction":"Agrega las setas y cocina a fuego medio durante 20 minutos o hasta que estén suaves y ligeramente brillosas.  Favor de decir listo cuando se termine",
+            "instruction":"Agrega las setas y cocina a fuego medio durante 20 minutos o hasta que estén suaves y ligeramente brillosas.  Favor de decir listo cuando termine",
             "img":"imgs/r3_p2.jpg"
         },
         {
-            "instruction":"Incorpora el Caldillo Líquido De Tomate Rojo Knorr®, el laurel, el cubo de Caldo De Vegetales Knorr® y el adobo de chipotle. Cocina durante 5 minutos más hasta que tenga consistencia de tinga.  Favor de decir listo cuando se termine",
+            "instruction":"Incorpora el Caldillo Líquido De Tomate Rojo Knorr®, el laurel, el cubo de Caldo De Vegetales Knorr® y el adobo de chipotle. Cocina durante 5 minutos más hasta que tenga consistencia de tinga.  Favor de decir listo cuando termine",
             "img":"imgs/r3_p3.jpg"
         },
         {
-            "instruction":"Toma la tostada, untale frijoles y distribuye tinga en las tostadas.  Favor de decir listo cuando se termine",
+            "instruction":"Toma la tostada, untale frijoles y distribuye tinga en las tostadas.  Favor de decir listo cuando termine",
             "img":"imgs/r3_p4.jpg"
         }
     ],
